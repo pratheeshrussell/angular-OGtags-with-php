@@ -1,1 +1,7 @@
-<p>image-link works!</p>
+<div class="vh-100 d-flex align-items-center justify-content-center">
+    <div class="row col-4">
+        <div class="d-flex align-items-center justify-content-center"><strong>{{imgTitle}}</strong></div>
+        <img [src]="imgLink" *ngIf="imgLink !== ''" class="rounded mx-auto d-block my-2" height="300" width="auto">
+        <span>{{imgDesc}}</span>
+    </div>
+</div>

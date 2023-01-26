@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-image-link',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ImageLinkComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private route:ActivatedRoute) { }
+  imgLink="";
+  imgTitle="";
+  imgDesc="";
   ngOnInit(): void {
+    const imgData = JSON.parse(window.atob( 
+      decodeURIComponent(this.route.snapshot.queryParams["ogdata"])));
+    this.imgLink = imgData['imgurl'];
+    this.imgTitle = imgData['title'];
+    this.imgDesc = imgData['description'];
   }
 
 }

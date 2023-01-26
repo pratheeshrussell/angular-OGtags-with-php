@@ -59,11 +59,14 @@ In **angular.json**  add the folder to assets array
     "src/php-includes"],
 ```
 
+## Running the demo
+* add your unsplash api key in settings.app.ts.
+* build and host at some free shared hosting.
 
 ## Limitations
 * Can be used to set only headers. Content itself will not be prerendered.  
 * Needs a server with PHP setup.
-* It will not work in dev server. You may thry something like `http-server-php`
+* It will not work in dev server. You may thy something like `http-server-php`
 
 
 ## Versions

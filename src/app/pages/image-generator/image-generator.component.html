@@ -1,1 +1,13 @@
-<p>image-generator works!</p>
+<div class="vh-100 d-flex align-items-center justify-content-center">
+    <div class="row col-4">
+        <button class="btn btn-primary" *ngIf="generateButton.visible"
+        (click)="handleGenerate()" [disabled]="!generateButton.enabled">Generate</button>
+        
+        <img [src]="imgLink" *ngIf="imgLink !== ''" class="rounded mx-auto d-block" height="300" width="auto">
+        <div *ngIf="shareLink !== ''" class="my-3">
+            <span>Share link</span>
+            <textarea rows="4" class="form-control"  disabled>{{shareLink}}</textarea>
+        </div>
+    </div>
+</div>
+  
